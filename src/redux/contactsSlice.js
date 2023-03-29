@@ -5,6 +5,7 @@ import { persistReducer } from 'redux-persist';
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: { contacts: [], filter: '' },
+
   reducers: {
     addContact(state, { payload }) {
       state.contacts.push(payload);
