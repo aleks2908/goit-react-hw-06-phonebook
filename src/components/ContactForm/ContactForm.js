@@ -23,6 +23,7 @@ export const ContactForm = () => {
 
     dispatch(
       addContact({
+        // values,
         name: values.name,
         number: values.number,
         id: nanoid(),

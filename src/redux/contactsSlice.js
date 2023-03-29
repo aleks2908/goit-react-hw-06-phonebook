@@ -12,12 +12,32 @@ const contactsSlice = createSlice({
     },
     deleteContact(state, { payload }) {
       state.contacts = state.contacts.filter(item => item.id !== payload);
+      //   const index = state.contacts.findIndex(item => item.id === payload);
+      //   state.contacts.splice(index, 1);
     },
     changeFilter(state, { payload }) {
       state.filter = payload;
     },
   },
 });
+
+//   reducers: {
+//     addContact: {
+//       reducer(state, { payload }) {
+//         // console.log('payload: ', payload);
+//         state.contacts.push(payload);
+//       },
+//       prepare(values) {
+//         console.log('values: ', values);
+//         return {
+//           payload: {
+//             name: values.name,
+//             number: values.number,
+//             id: nanoid(),
+//           },
+//         };
+//       },
+//     },
 
 const contactsPersistConfig = {
   key: 'contacts',
