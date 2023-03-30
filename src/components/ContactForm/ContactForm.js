@@ -41,28 +41,31 @@ export const ContactForm = () => {
   });
 
   return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={handleSubmit}
-      validationSchema={userSchema}
-    >
-      <Form className={css.form}>
-        <label>
-          Name <br />
-          <Field className={css.label} name="name" />
-          <ErrorMessage className={css.error} component="div" name="name" />
-        </label>
-        <label>
+    <>
+      <h2>PhoneBook</h2>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+        validationSchema={userSchema}
+      >
+        <Form className={css.form}>
+          <label>
+            Name <br />
+            <Field className={css.label} name="name" />
+            <ErrorMessage className={css.error} component="div" name="name" />
+          </label>
+          <label>
+            <br />
+            Number <br />
+            <Field className={css.label} name="number" />
+            <ErrorMessage className={css.error} component="div" name="number" />
+          </label>
           <br />
-          Number <br />
-          <Field className={css.label} name="number" />
-          <ErrorMessage className={css.error} component="div" name="number" />
-        </label>
-        <br />
-        <button className={css.button} type="submit">
-          Add contact
-        </button>
-      </Form>
-    </Formik>
+          <button className={css.button} type="submit">
+            Add contact
+          </button>
+        </Form>
+      </Formik>
+    </>
   );
 };

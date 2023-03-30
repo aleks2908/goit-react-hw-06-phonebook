@@ -7,12 +7,8 @@ import { ContactList } from '../ContactList/ContactList';
 export const App = () => {
   return (
     <div className={css.wrapper}>
-      <h2>PhoneBook</h2>
       <ContactForm />
-
-      <h3>Contacts</h3>
       <Filter />
-
       <ContactList />
     </div>
   );
